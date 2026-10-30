@@ -1,0 +1,60 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.makeid.makeidlockdemo'
+    // Retain this new project's existing AGP/compile SDK toolchain.
+    compileSdk {
+        version = release(36) { minorApiLevel = 1 }
+    }
+    defaultConfig {
+        applicationId 'com.makeid.makeidlockdemo'
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        ndk { abiFilters 'arm64-v8a' }
+    }
+    buildFeatures { viewBinding true }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    packaging {
+        jniLibs {
+            // Verify both copies are identical in the supplier's actual delivery first.
+            pickFirsts += ['**/libcrypto_1_1.so', '**/libssl_1_1.so']
+        }
+    }
+}
+
+def requiredSdkFiles = ['MkdLockLib_1030_v1.7.19-release.aar', 'MkdElectronicKeyLib_1030_v1.0.2-release.aar', 'makeid_bleconnectlib_1.1.aar']
+tasks.register('verifySdkDelivery') {
+    doLast {
+        def missing = requiredSdkFiles.findAll { !file("libs/$it").isFile() }
+        if (!missing.empty) {
+            throw new GradleException("Missing supplier SDK AARs in app/libs: ${missing.join(', ')}. See app/libs/README.md. Do not substitute intermediate JARs.")
+        }
+    }
+}
+tasks.named('preBuild').configure { dependsOn 'verifySdkDelivery' }
+
+dependencies {
+    requiredSdkFiles.each { implementation files("libs/$it") }
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.10'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'com.github.getActivity:XXPermissions:18.5'
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}
