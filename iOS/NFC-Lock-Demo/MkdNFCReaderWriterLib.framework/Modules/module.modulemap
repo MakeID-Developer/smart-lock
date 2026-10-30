@@ -1,0 +1,6 @@
+framework module MkdNFCReaderWriterLib {
+  umbrella header "MkdNFCReaderWriterLib.h"
+  export *
+
+  module * { export * }
+}

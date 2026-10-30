@@ -1,0 +1,6 @@
+framework module MkdLockLib {
+  umbrella header "MkdLockLib.h"
+  export *
+
+  module * { export * }
+}

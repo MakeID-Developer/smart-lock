@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NFCLockMainViewController">
+            <connections>
+                <outlet property="lockButton" destination="Yjn-vz-h19" id="QjK-LV-rfD"/>
+                <outlet property="logTextView" destination="WjB-Pz-Iwg" id="atx-oe-VEa"/>
+                <outlet property="macTextField" destination="PHd-4U-P1n" id="uC3-fj-VFd"/>
+                <outlet property="pwTextField" destination="lZV-i4-zZ5" id="WkE-uO-GTv"/>
+                <outlet property="actionStackView" destination="XuZ-n6-2os" id="act-st-k01"/>
+                <outlet property="keySmSecretTextField" destination="ksF-01-abc" id="ksF-ot-001"/>
+                <outlet property="queryConfigButton" destination="Cro-dn-DEy" id="D8V-7o-RHX"/>
+                <outlet property="smSecretTextField" destination="smF-01-abc" id="smF-ot-001"/>
+                <outlet property="snTextFiled" destination="QHx-6U-5Gu" id="v0g-Eq-GT1"/>
+                <outlet property="uidTextField" destination="uid-01-abc" id="uid-ot-001"/>
+                <outlet property="unlockCountButton" destination="mF3-5x-Alx" id="Tjp-dc-iQv"/>
+                <outlet property="unlockTypeSegment" destination="WXJ-sD-bO7" id="dmI-yU-e4C"/>
+                <outlet property="uploadMacButton" destination="kHh-JC-5nM" id="tSc-if-vUS"/>
+                <outlet property="versionButton" destination="nCM-zH-M8i" id="ggL-My-KnI"/>
+                <outlet property="view" destination="B9x-mB-feP" id="de3-Wc-Boq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="B9x-mB-feP">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0o-bL-eFH">
+                    <rect key="frame" x="10" y="418.33333333333331" width="40" height="20.333333333333314"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="4au-js-O6f"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter lock secret key" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lZV-i4-zZ5">
+                    <rect key="frame" x="55" y="413.33333333333331" width="323" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="qUH-X5-7kf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIa-P2-vmi">
+                    <rect key="frame" x="10" y="338.33333333333331" width="40" height="20.333333333333314"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="hFk-CF-7sb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap Step 1 to get SN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QHx-6U-5Gu">
+                    <rect key="frame" x="55" y="333.33333333333331" width="323" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="adx-oz-6b5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUV-al-hls">
+                    <rect key="frame" x="5.0000000000000036" y="123" width="57.333333333333343" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="highlightedColor" red="0.66587251420000004" green="0.66587251420000004" blue="0.66587251420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WjB-Pz-Iwg" customClass="LogTextView">
+                    <rect key="frame" x="10" y="146" width="373" height="182.33333333333337"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="WjB-Pz-Iwg" secondAttribute="height" multiplier="5:3" constant="69" id="1an-sp-euu"/>
+                    </constraints>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smL-01-abc">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="smL-w-001"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lock smSecret (optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="smF-01-abc">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="smF-h-001"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Key" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksL-01-abc">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="ksL-w-001"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Key smSecret (for ekey)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ksF-01-abc">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="ksF-h-001"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uidL-01-abc">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="uidL-w-001"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User UID (optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uid-01-abc">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="uid-h-001"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XuZ-n6-2os">
+                    <rect key="frame" x="15" y="463.33333333333326" width="363" height="191"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7pp-58-xb4">
+                            <rect key="frame" x="0.0" y="0.0" width="363" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNx-NP-0oP" userLabel="1.Get SN">
+                                    <rect key="frame" x="0.0" y="0.0" width="87" height="44"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Get SN">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="clickGetSNButtonAction:" destination="-1" eventType="touchUpInside" id="Qh1-7U-AWg"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCM-zH-M8i">
+                                    <rect key="frame" x="92" y="0.0" width="87" height="44"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="FW Version">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="clickGetVersionButtonAction:" destination="-1" eventType="touchUpInside" id="9Ze-09-1Qe"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxy-Ce-7Hk">
+                                    <rect key="frame" x="184" y="0.0" width="87" height="44"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Battery/Status">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="clickGetStatusButtonAction:" destination="-1" eventType="touchUpInside" id="nCR-Sb-jvp"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9g5-2F-gaG" userLabel="Simulate Charging">
+                                    <rect key="frame" x="276" y="0.0" width="87" height="44"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Simulate Charging">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="clickChargingButtonAction:" destination="-1" eventType="touchUpInside" id="HvS-vp-ViA"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eyV-Ws-yB0">
+                            <rect key="frame" x="0.0" y="49.000000000000057" width="363" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPT-SF-eSJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="117.66666666666667" height="44"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Unlock">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="clickUnlockButon:" destination="-1" eventType="touchUpInside" id="pRm-qg-E5b"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yjn-vz-h19">
+                                    <rect key="frame" x="122.66666666666666" y="0.0" width="117.66666666666666" height="44"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Lock">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="clickLockButtonAction:" destination="-1" eventType="touchUpInside" id="81C-2q-zNn"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRm-KG-cG3">
+                                    <rect key="frame" x="245.33333333333329" y="0.0" width="117.66666666666666" height="44"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain">
+                                        <string key="title">NFC
+Auto Unlock</string>
+                                        <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="clickAutoUnlockButon:" destination="-1" eventType="touchUpInside" id="mr8-1k-60X"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="mvw-cm-aUX">
+                            <rect key="frame" x="0.0" y="98.000000000000057" width="363" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHh-JC-5nM">
+                                    <rect key="frame" x="0.0" y="0.0" width="119" height="44"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Offline Info">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="clickUploadMacButtonAction:" destination="-1" eventType="touchUpInside" id="jhx-uv-P4a"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mF3-5x-Alx">
+                                    <rect key="frame" x="122" y="0.0" width="119" height="44"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Unlock Count">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="clickReadUnlockTimesAction:" destination="-1" eventType="touchUpInside" id="yzi-az-uMO"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cro-dn-DEy">
+                                    <rect key="frame" x="244" y="0.0" width="119" height="44"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Query Config">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="clickQueryConfigButtonAction:" destination="-1" eventType="touchUpInside" id="zvR-46-IY8"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="EgC-dv-LkN">
+                            <rect key="frame" x="0.0" y="147.00000000000006" width="363" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57y-j2-625" userLabel="ekey Unlock">
+                                    <rect key="frame" x="0.0" y="0.0" width="119.66666666666667" height="44"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="ekey Unlock">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="clickEkeyUnlockButtonAction:" destination="-1" eventType="touchUpInside" id="nEy-7l-aF7"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRB-zo-jpZ" userLabel="ekey Unlock">
+                                    <rect key="frame" x="121.66666666666666" y="0.0" width="119.66666666666666" height="44"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="ekey Lock">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="clickEkeyLockButtonAction:" destination="-1" eventType="touchUpInside" id="wyz-W8-ZEJ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHc-Mg-IiH" userLabel="ekey Tools">
+                                    <rect key="frame" x="243.33333333333329" y="0.0" width="119.66666666666666" height="44"/>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="ekey Tools">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="clickOfflineAuthAction:" destination="-1" eventType="touchUpInside" id="jKW-wH-VsP"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="eyV-Ws-yB0" secondAttribute="trailing" id="TXO-NH-iMc"/>
+                        <constraint firstItem="eyV-Ws-yB0" firstAttribute="leading" secondItem="XuZ-n6-2os" secondAttribute="leading" id="W7C-0k-f7M"/>
+                        <constraint firstAttribute="trailing" secondItem="7pp-58-xb4" secondAttribute="trailing" id="h7G-WO-NMJ"/>
+                        <constraint firstAttribute="height" constant="191" id="sJf-tn-oDT"/>
+                        <constraint firstItem="7pp-58-xb4" firstAttribute="leading" secondItem="XuZ-n6-2os" secondAttribute="leading" id="tn3-6S-RRS"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRL-At-cGZ">
+                    <rect key="frame" x="308" y="106" width="80" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="G78-pM-90e"/>
+                        <constraint firstAttribute="height" constant="40" id="evt-c7-yz8"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Clear">
+                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="ClickClearButtonAction:" destination="-1" eventType="touchUpInside" id="kfP-1G-kae"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMP-Tt-mfe">
+                    <rect key="frame" x="10" y="378.33333333333331" width="40" height="20.333333333333314"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="hfr-mg-InZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap Step 1 to get MAC" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PHd-4U-P1n">
+                    <rect key="frame" x="55" y="373.33333333333331" width="323" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="xCB-FD-7vE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlock Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7so-Cp-aKo">
+                    <rect key="frame" x="14.999999999999996" y="711" width="59.666666666666657" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WXJ-sD-bO7">
+                    <rect key="frame" x="15" y="744" width="363" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="ooy-E0-V1v"/>
+                    </constraints>
+                    <segments>
+                        <segment title="Phone NFC"/>
+                        <segment title="NFC Reader"/>
+                        <segment title="Offline Mode"/>
+                        <segment title="BLE Unlock"/>
+                    </segments>
+                    <color key="selectedSegmentTintColor" red="1" green="0.49019607840000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="clickUnlockMethodSegmentAction:" destination="-1" eventType="valueChanged" id="NBZ-zo-Wu0"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="nEH-yE-byC"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="nEH-yE-byC" firstAttribute="trailing" secondItem="WXJ-sD-bO7" secondAttribute="trailing" constant="15" id="1Oh-cZ-l7G"/>
+                <constraint firstItem="PHd-4U-P1n" firstAttribute="leading" secondItem="QHx-6U-5Gu" secondAttribute="leading" id="4DP-NQ-yfx"/>
+                <constraint firstItem="nEH-yE-byC" firstAttribute="trailing" secondItem="XuZ-n6-2os" secondAttribute="trailing" constant="15" id="7b1-9Q-dao"/>
+                <constraint firstItem="7so-Cp-aKo" firstAttribute="leading" secondItem="nEH-yE-byC" secondAttribute="leading" constant="15" id="EjZ-ce-C3x"/>
+                <constraint firstItem="XuZ-n6-2os" firstAttribute="top" secondItem="uid-01-abc" secondAttribute="bottom" constant="10" id="Fu4-2c-Vis"/>
+                <constraint firstItem="smF-01-abc" firstAttribute="top" secondItem="lZV-i4-zZ5" secondAttribute="bottom" constant="10" id="smF-t-001"/>
+                <constraint firstItem="smF-01-abc" firstAttribute="leading" secondItem="lZV-i4-zZ5" secondAttribute="leading" id="smF-l-001"/>
+                <constraint firstItem="smF-01-abc" firstAttribute="trailing" secondItem="lZV-i4-zZ5" secondAttribute="trailing" id="smF-r-001"/>
+                <constraint firstItem="smL-01-abc" firstAttribute="leading" secondItem="O0o-bL-eFH" secondAttribute="leading" id="smL-l-001"/>
+                <constraint firstItem="smL-01-abc" firstAttribute="centerY" secondItem="smF-01-abc" secondAttribute="centerY" id="smL-c-001"/>
+                <constraint firstItem="ksF-01-abc" firstAttribute="top" secondItem="smF-01-abc" secondAttribute="bottom" constant="10" id="ksF-t-001"/>
+                <constraint firstItem="ksF-01-abc" firstAttribute="leading" secondItem="lZV-i4-zZ5" secondAttribute="leading" id="ksF-l-001"/>
+                <constraint firstItem="ksF-01-abc" firstAttribute="trailing" secondItem="lZV-i4-zZ5" secondAttribute="trailing" id="ksF-r-001"/>
+                <constraint firstItem="ksL-01-abc" firstAttribute="leading" secondItem="O0o-bL-eFH" secondAttribute="leading" id="ksL-l-001"/>
+                <constraint firstItem="ksL-01-abc" firstAttribute="centerY" secondItem="ksF-01-abc" secondAttribute="centerY" id="ksL-c-001"/>
+                <constraint firstItem="uid-01-abc" firstAttribute="top" secondItem="ksF-01-abc" secondAttribute="bottom" constant="10" id="uid-t-001"/>
+                <constraint firstItem="uid-01-abc" firstAttribute="leading" secondItem="lZV-i4-zZ5" secondAttribute="leading" id="uid-l-001"/>
+                <constraint firstItem="uid-01-abc" firstAttribute="trailing" secondItem="lZV-i4-zZ5" secondAttribute="trailing" id="uid-r-001"/>
+                <constraint firstItem="uidL-01-abc" firstAttribute="leading" secondItem="O0o-bL-eFH" secondAttribute="leading" id="uidL-l-001"/>
+                <constraint firstItem="uidL-01-abc" firstAttribute="centerY" secondItem="uid-01-abc" secondAttribute="centerY" id="uidL-c-001"/>
+                <constraint firstItem="O0o-bL-eFH" firstAttribute="leading" secondItem="nEH-yE-byC" secondAttribute="leading" constant="10" id="GT2-Xd-22A"/>
+                <constraint firstItem="eMP-Tt-mfe" firstAttribute="leading" secondItem="RIa-P2-vmi" secondAttribute="leading" id="J0D-6u-PVU"/>
+                <constraint firstItem="WXJ-sD-bO7" firstAttribute="bottom" secondItem="nEH-yE-byC" secondAttribute="bottom" id="JnK-hf-wFT"/>
+                <constraint firstItem="QHx-6U-5Gu" firstAttribute="leading" secondItem="RIa-P2-vmi" secondAttribute="trailing" constant="5" id="K1V-0a-n95"/>
+                <constraint firstItem="nEH-yE-byC" firstAttribute="trailing" secondItem="QHx-6U-5Gu" secondAttribute="trailing" constant="15" id="MCP-CX-x0l"/>
+                <constraint firstItem="nUV-al-hls" firstAttribute="leading" secondItem="nEH-yE-byC" secondAttribute="leading" constant="5" id="OMK-Ha-N6b"/>
+                <constraint firstItem="WXJ-sD-bO7" firstAttribute="leading" secondItem="nEH-yE-byC" secondAttribute="leading" constant="15" id="OPZ-DK-l6L"/>
+                <constraint firstItem="lZV-i4-zZ5" firstAttribute="top" secondItem="PHd-4U-P1n" secondAttribute="bottom" constant="10" id="Oqd-wO-zFn"/>
+                <constraint firstItem="eMP-Tt-mfe" firstAttribute="centerY" secondItem="PHd-4U-P1n" secondAttribute="centerY" id="PqL-Rg-tVK"/>
+                <constraint firstItem="XuZ-n6-2os" firstAttribute="leading" secondItem="nEH-yE-byC" secondAttribute="leading" constant="15" id="RQc-L4-eHt"/>
+                <constraint firstItem="WjB-Pz-Iwg" firstAttribute="top" secondItem="FRL-At-cGZ" secondAttribute="bottom" id="XkS-9M-jMa"/>
+                <constraint firstItem="WXJ-sD-bO7" firstAttribute="top" secondItem="7so-Cp-aKo" secondAttribute="bottom" constant="15" id="Y3X-d1-kXy"/>
+                <constraint firstItem="PHd-4U-P1n" firstAttribute="trailing" secondItem="QHx-6U-5Gu" secondAttribute="trailing" id="ZzK-8W-r3m"/>
+                <constraint firstItem="nEH-yE-byC" firstAttribute="trailing" secondItem="FRL-At-cGZ" secondAttribute="trailing" constant="5" id="aaJ-py-kbW"/>
+                <constraint firstItem="nEH-yE-byC" firstAttribute="trailing" secondItem="lZV-i4-zZ5" secondAttribute="trailing" constant="15" id="jGM-Ds-5fD"/>
+                <constraint firstItem="RIa-P2-vmi" firstAttribute="centerY" secondItem="QHx-6U-5Gu" secondAttribute="centerY" id="m9e-eF-kFw"/>
+                <constraint firstItem="QHx-6U-5Gu" firstAttribute="top" secondItem="WjB-Pz-Iwg" secondAttribute="bottom" constant="5" id="mPy-Ic-pVp"/>
+                <constraint firstItem="O0o-bL-eFH" firstAttribute="centerY" secondItem="lZV-i4-zZ5" secondAttribute="centerY" id="mif-L3-HJW"/>
+                <constraint firstItem="RIa-P2-vmi" firstAttribute="leading" secondItem="nEH-yE-byC" secondAttribute="leading" constant="10" id="n5c-nm-DsJ"/>
+                <constraint firstItem="lZV-i4-zZ5" firstAttribute="leading" secondItem="QHx-6U-5Gu" secondAttribute="leading" id="nYE-MJ-rqG"/>
+                <constraint firstItem="PHd-4U-P1n" firstAttribute="top" secondItem="QHx-6U-5Gu" secondAttribute="bottom" constant="10" id="pEV-Io-Ak1"/>
+                <constraint firstItem="nUV-al-hls" firstAttribute="top" secondItem="nEH-yE-byC" secondAttribute="top" constant="5" id="poJ-ia-oIu"/>
+                <constraint firstItem="WjB-Pz-Iwg" firstAttribute="top" secondItem="nUV-al-hls" secondAttribute="bottom" constant="5" id="rac-Do-7Oi"/>
+                <constraint firstItem="WjB-Pz-Iwg" firstAttribute="leading" secondItem="nEH-yE-byC" secondAttribute="leading" constant="10" id="uYG-rO-duO"/>
+                <constraint firstItem="nEH-yE-byC" firstAttribute="trailing" secondItem="WjB-Pz-Iwg" secondAttribute="trailing" constant="10" id="urI-Wy-kgF"/>
+            </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="Gls-eX-md7" appends="YES" id="fK2-xP-sLw"/>
+            </connections>
+            <point key="canvasLocation" x="139.69465648854961" y="-626.05633802816908"/>
+        </view>
+        <tapGestureRecognizer id="Gls-eX-md7">
+            <connections>
+                <action selector="tapBgViewGesture:" destination="-1" id="N4l-zU-Xci"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
